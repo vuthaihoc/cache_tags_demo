@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/get_text/{id}', [
+    'as' => 'get_text',
+    'uses' => 'GetTextController@index'
+]);
